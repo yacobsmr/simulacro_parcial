@@ -1,0 +1,15 @@
+binario = input("Ingrese el código binario: ")
+binario = binario.strip()
+
+valido = True
+for letra in binario:
+    if letra != '0' and letra != '1':
+        valido = False
+
+if valido:
+    decimal = 0
+    for letra in binario:
+        decimal = decimal * 2 + int(letra)
+    print(f"El valor decimal es: {decimal}")
+else:
+    print("El código no corresponde a un binario vuelve a intentarlo.")
