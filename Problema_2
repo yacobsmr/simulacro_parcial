@@ -1,0 +1,10 @@
+entrada = input("¿Desea continuar con el proceso? (si/no): ")
+
+respuesta = entrada.strip().upper()
+
+if respuesta == "SI" or respuesta == "SÍ":
+    print("Resultado: Afirmación")
+elif respuesta == "NO":
+    print("Resultado: Negación")
+else:
+    print("Resultado: Respuesta inválida")

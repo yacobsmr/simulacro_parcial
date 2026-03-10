@@ -1,0 +1,23 @@
+entrada = input("Ingrese el dato a clasificar: ")
+dato = entrada.strip()
+
+if dato.upper() == "TRUE" or dato.upper() == "FALSE":
+    print("Clasificación: valor booleano")
+
+elif dato.isdigit():
+    print("Clasificación: número entero")
+else:
+    puntos = dato.count(".")
+    numero = True
+    
+    if puntos == 1:
+        for caracter in dato:
+            if caracter != "." and not caracter.isdigit():
+                numero = False
+        
+        if numero:
+            print("Clasificación: número decimal")
+        else:
+            print("Clasificación: cadena de texto general")
+    else:
+        print("Clasificación: cadena de texto general")

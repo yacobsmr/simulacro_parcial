@@ -1,0 +1,11 @@
+entrada = input("Ingrese su identificador: ")
+identificador = entrada.strip()
+
+if len(identificador) != 8:
+    print("Error: longitud incorrecta")
+elif identificador[:3] != "est":
+    print("Error: no inicia con est")
+elif not identificador[-3:].isdigit():
+    print("Error: terminación numérica inválida")
+else:
+    print("Identificador válido")

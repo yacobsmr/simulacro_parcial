@@ -1,0 +1,21 @@
+entrada = input("Ingrese la trama de 8 bits: ")
+trama = entrada.strip()
+
+es_valida = 1
+
+if len(trama) != 8:
+    es_valida = 0
+else:
+    for caracter in trama:
+        if caracter != '0' and caracter != '1':
+            es_valida = 0
+if es_valida == 1:
+    conteo_unos = trama.count('1')
+    if conteo_unos > 5:
+        print("Trama de alta activación")
+    elif conteo_unos >= 3:
+        print("Trama de activación media")
+    else:
+        print("Trama de baja activación")
+else:
+    print("La trama es inválida")
